@@ -1,27 +1,27 @@
 export const data1 = [
     {
-        color: "bg-gray-600 border-2 border-yellow-500",
+        color: true,
         name: "image1",
         url: "/images/space1.png",
         type: "Event",
         desc: "Rayakan perayaan dan acara terbaik dengan tempat pilihan terbaik dan akses lebih mudah."
     },
     {
-        color: "bg-gray-800",
+        color: false,
         name: "image2",
         url: "/images/space2.png",
         type: "Meeting",
         desc: "Ruang rapat nyaman, menciptakan suasana ideal untuk pertemuan bisnis yang efektif dan produktif."
     },
     {
-        color: "bg-gray-800",
+        color: false,
         name: "image3",
         url: "/images/space3.png",
         type: "Photo Shoot",
         desc: "Ruang foto dengan design profesional, memberikan pengalaman berkesan untuk sesi pemotretan."
     },
     {
-        color: "bg-gray-800",
+        color: false,
         name: "image4",
         url: "/images/space4.png",
         type: "Video Shoot",
