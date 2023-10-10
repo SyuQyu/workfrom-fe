@@ -1,35 +1,76 @@
 'use client'
+
+import { Button, Typography } from "@material-tailwind/react";
+import { Card, Card2, CarouselComponent, ImageWithFallback, Tabs } from "@/components/common";
 export const metadata = {
     title: 'Peluang.co',
     description: 'test description',
 };
 
+import { images } from '@/contants/imageHome'
+import { data1, data2 } from '@/contants/tipeSpace'
 export default function Page() {
 
     return (
         <>
-            <div
-                className="absolute top-0 left-0 right-0 overflow-hidden bg-cover bg-no-repeat p-12 text-center"
-                style={{ height: '100vh', backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/bgHome.png)` }}>
-                <div
-                    className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
-                    <div className="flex h-full items-center justify-center">
-                        <div className="text-white">
-                            <h2 className="mb-4 text-4xl font-semibold">Heading</h2>
-                            <h4 className="mb-6 text-xl font-semibold">Subheading</h4>
-                            <button
-                                type="button"
-                                className="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                                data-te-ripple-init
-                                data-te-ripple-color="light">
-                                Call to action
-                            </button>
-                        </div>
-                    </div>
+            <div className="h-[93vh]">
+                <CarouselComponent data={images} />
+            </div>
+            <div className="w-full flex justify-center items-center">
+                <div className="w-[80%]">
+                    <Tabs />
                 </div>
             </div>
-            <div style={{height: '500vh'}}>
-                test
+            <div className="flex flex-col justify-center items-center gap-4 mt-24 mb-32">
+                <Typography variant="h2" className="text-center">
+                    Partner Kami
+                </Typography>
+                <ImageWithFallback
+                    priority={true}
+                    width={0}
+                    height={0}
+                    sizes='10vw'
+                    className='w-1/2 rounded-lg object-contain' src='/images/partner.png' alt="" />
+            </div>
+            <div className="bg-[#212121] text-white px-16">
+                <div className="mt-20 flex flex-col items-center">
+                    <div>
+                        <Typography variant="h2" className="text-center">
+                            Sesuaikan dengan
+                        </Typography>
+                        <Typography variant="h2" className="text-center text-gold-500">
+                            Kebutuhan
+                        </Typography>
+                    </div>
+                    <div className="mt-14 flex gap-4 justify-between">
+                        {
+                            data1.map((item: any, index: number) =>
+                                <Card data={item} key={index} />
+                            )
+                        }
+                    </div>
+                    <Button className="mt-14 bg-gold-500 text-black w-[20%]" fullWidth>
+                        Book Sekarang
+                    </Button>
+                    <div className="mt-16">
+                        <Typography variant="h2" className="text-center">
+                            Pilih <span className="text-gold-500 italic">Space</span>
+                        </Typography>
+                        <Typography variant="h2" className="text-center text-white">
+                            Terdekat
+                        </Typography>
+                    </div>
+                    <div className="mt-14 flex gap-24 justify-between w-[75%]">
+                        {
+                            data2.map((item: any, index: number) =>
+                                <Card2 data={item} key={index} />
+                            )
+                        }
+                    </div>
+                    <Button className="my-20 bg-gold-500 text-black w-[20%]" fullWidth>
+                        Jelajahi semua lokasi
+                    </Button>
+                </div>
             </div>
         </>
     );

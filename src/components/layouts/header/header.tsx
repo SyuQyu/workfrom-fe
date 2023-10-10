@@ -57,7 +57,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-bold text-gold-500"
+                className="p-1 font-bold text-black"
             >
                 <Link href="#" className="flex items-center">
                     As Bulding Owner
