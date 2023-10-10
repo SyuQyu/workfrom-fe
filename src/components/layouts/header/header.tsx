@@ -11,7 +11,7 @@ import {
     Collapse,
 } from "@material-tailwind/react";
 import { ImageWithFallback } from "@/components/common";
-export default function Header({ className }: Props) {
+export default function Header({ className, authPage, setAuthPage }: Props) {
     const [openNav, setOpenNav] = React.useState(false);
 
     React.useEffect(() => {
@@ -68,12 +68,14 @@ export default function Header({ className }: Props) {
     return (
         <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
             <div className="flex items-center justify-between text-blue-gray-900 font-bold">
-                <ImageWithFallback
-                    priority={true}
-                    width={0}
-                    height={0}
-                    sizes='10vw'
-                    className='w-[150px] max-w-full rounded-lg object-contain' src='/images/Logo-WF.png' alt="" />
+                <Link href="/">
+                    <ImageWithFallback
+                        priority={true}
+                        width={0}
+                        height={0}
+                        sizes='10vw'
+                        className='w-[150px] max-w-full rounded-lg object-contain' src='/images/Logo-WF.png' alt="" />
+                </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>
                     <IconButton
@@ -116,20 +118,20 @@ export default function Header({ className }: Props) {
                 </div>
                 <div className="lg:flex gap-4 hidden">
                     <Button variant="outlined" size="sm" color="blue-gray" className="hidden lg:inline-block" fullWidth>
-                        Login
+                        <Link href="/login">Login</Link>
                     </Button>
-                    <Button variant="gradient" size="sm" className="hidden lg:inline-block " fullWidth>
-                        Register
+                    <Button variant="gradient" size="sm" className="hidden lg:inline-block" fullWidth>
+                        <Link href="/register">register</Link>
                     </Button>
                 </div>
             </div>
             <Collapse open={openNav}>
                 {navList}
                 <Button variant="outlined" size="sm" color="blue-gray" className="mb-2" fullWidth>
-                    Login
+                    <Link href="/login">Login</Link>
                 </Button>
                 <Button variant="gradient" size="sm" className="mb-2" fullWidth>
-                    Register
+                    <Link href="/register">register</Link>
                 </Button>
             </Collapse>
         </Navbar>
@@ -138,4 +140,6 @@ export default function Header({ className }: Props) {
 
 type Props = {
     className?: string;
+    authPage?: boolean;
+    setAuthPage?: any;
 };
