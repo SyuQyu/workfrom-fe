@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Typography } from "@material-tailwind/react";
-import { Card, Card2, CarouselComponent, ImageWithFallback, Tabs } from "@/components/common";
+import { AccordionComponent, Card, Card2, CarouselComponent, ImageWithFallback, InputWithButton, Tabs } from "@/components/common";
 export const metadata = {
     title: 'Peluang.co',
     description: 'test description',
@@ -70,6 +70,30 @@ export default function Page() {
                     <Button className="my-20 bg-gold-500 text-black w-[20%]" fullWidth>
                         Jelajahi semua lokasi
                     </Button>
+                </div>
+            </div>
+            <div className="my-20 text-center flex flex-col justify-center items-center">
+                <Typography variant="h2" className="text-center">
+                    Pesan <span className="text-gold-500 italic">Workspace</span> mu
+                </Typography>
+                <Typography variant="h2" className="text-cente">
+                    Sekarang!
+                </Typography>
+                <Typography variant='h6' className="mt-6 text-cente">
+                    Isi detail kontak Anda, dan perwakilan kami akan menghubungi Anda kembali!
+                </Typography>
+                <div className="mt-4 w-1/4">
+                    <InputWithButton />
+                </div>
+            </div>
+            <div className="bg-[#212121] text-white px-16 py-20">
+                <div className="flex justify-between gap-8 items-center">
+                    <Typography variant="h1">
+                        Frequently Asked Questions
+                    </Typography>
+                    <div>
+                        <AccordionComponent />
+                    </div>
                 </div>
             </div>
         </>
