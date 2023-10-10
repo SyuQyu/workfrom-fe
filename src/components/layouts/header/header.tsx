@@ -27,7 +27,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-normal"
+                className="p-1 font-bold text-black"
             >
                 <Link href="#" className="flex items-center">
                     Office & Coworking Space
@@ -37,7 +37,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-normal"
+                className="p-1 font-bold text-black"
             >
                 <Link href="#" className="flex items-center">
                     Blog
@@ -47,7 +47,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-normal"
+                className="p-1 font-bold text-black"
             >
                 <Link href="#" className="flex items-center">
                     Contact Us
@@ -57,7 +57,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-bold text-red-900"
+                className="p-1 font-bold text-gold-500"
             >
                 <Link href="#" className="flex items-center">
                     As Bulding Owner
@@ -66,7 +66,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
         </ul>
     );
     return (
-        <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+        <div className="sticky top-5 z-10 h-max max-w-full rounded-xl py-2 px-4 lg:px-8 lg:py-4 m-5 shadow-2xl backdrop-blur-xl bg-white">
             <div className="flex items-center justify-between text-blue-gray-900 font-bold">
                 <Link href="/">
                     <ImageWithFallback
@@ -117,24 +117,24 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                     </IconButton>
                 </div>
                 <div className="lg:flex gap-4 hidden">
-                    <Button variant="outlined" size="sm" color="blue-gray" className="hidden lg:inline-block" fullWidth>
+                    <Button variant="text" size="sm" className="text-black hidden lg:inline-block" fullWidth>
                         <Link href="/login">Login</Link>
                     </Button>
-                    <Button variant="gradient" size="sm" className="hidden lg:inline-block" fullWidth>
+                    <Button size="sm" className="hidden lg:inline-block text-black bg-gold-500" fullWidth>
                         <Link href="/register">register</Link>
                     </Button>
                 </div>
             </div>
             <Collapse open={openNav}>
                 {navList}
-                <Button variant="outlined" size="sm" color="blue-gray" className="mb-2" fullWidth>
+                <Button variant="text" size="sm" className="mb-2" fullWidth>
                     <Link href="/login">Login</Link>
                 </Button>
-                <Button variant="gradient" size="sm" className="mb-2" fullWidth>
+                <Button size="sm" className="mb-2 text-black bg-gold-500" fullWidth>
                     <Link href="/register">register</Link>
                 </Button>
             </Collapse>
-        </Navbar>
+        </div>
     );
 }
 

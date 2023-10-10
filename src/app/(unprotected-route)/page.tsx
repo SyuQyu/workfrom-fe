@@ -1,13 +1,4 @@
 'use client'
-import clsx from 'clsx';
-import {
-    Navbar,
-    MobileNav,
-    Typography,
-    Button,
-    IconButton,
-    Card,
-} from "@material-tailwind/react";
 export const metadata = {
     title: 'Peluang.co',
     description: 'test description',
@@ -16,32 +7,30 @@ export const metadata = {
 export default function Page() {
 
     return (
-        <div className="py-12">
-            <Card className="mb-12 overflow-hidden">
-                <img
-                    alt="nature"
-                    className="h-[32rem] w-full object-cover object-center"
-                    src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
-                />
-            </Card>
-            <Typography variant="h2" color="blue-gray" className="mb-2">
-                What is Material Tailwind
-            </Typography>
-            <Typography color="gray" className="font-normal">
-                Can you help me out? you will get a lot of free exposure doing this
-                can my website be in english?. There is too much white space do less
-                with more, so that will be a conversation piece can you rework to make
-                the pizza look more delicious other agencies charge much lesser can
-                you make the blue bluer?. I think we need to start from scratch can my
-                website be in english?, yet make it sexy i&apos;ll pay you in a week
-                we don&apos;t need to pay upfront i hope you understand can you make
-                it stand out more?. Make the font bigger can you help me out? you will
-                get a lot of free exposure doing this that&apos;s going to be a chunk
-                of change other agencies charge much lesser. Are you busy this
-                weekend? I have a new project with a tight deadline that&apos;s going
-                to be a chunk of change. There are more projects lined up charge extra
-                the next time.
-            </Typography>
-        </div>
+        <>
+            <div
+                className="absolute top-0 left-0 right-0 overflow-hidden bg-cover bg-no-repeat p-12 text-center"
+                style={{ height: '100vh', backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/bgHome.png)` }}>
+                <div
+                    className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
+                    <div className="flex h-full items-center justify-center">
+                        <div className="text-white">
+                            <h2 className="mb-4 text-4xl font-semibold">Heading</h2>
+                            <h4 className="mb-6 text-xl font-semibold">Subheading</h4>
+                            <button
+                                type="button"
+                                className="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                                data-te-ripple-init
+                                data-te-ripple-color="light">
+                                Call to action
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style={{height: '500vh'}}>
+                test
+            </div>
+        </>
     );
 }
