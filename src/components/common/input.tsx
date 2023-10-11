@@ -12,7 +12,7 @@ export default function InputWithButton({ className, type, label, buttonName, bu
                 type={type ? type : "text"}
                 label={label ? label : "Masukkan Email Anda"}
                 value={email}
-
+                color={textColor ? textColor : "black"}
                 onChange={onChange}
                 className="pr-20"
                 containerProps={{
@@ -35,6 +35,6 @@ type props = {
     type?: string;
     label?: string;
     buttonName?: string;
-    textColor?: string | 'black';
+    textColor?: any;
     buttonStyle?: string | 'bg-gray-900';
 }
