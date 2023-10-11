@@ -29,7 +29,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 color="blue-gray"
                 className="p-1 font-bold text-black"
             >
-                <Link href="#" className="flex items-center">
+                <Link href="/spaces" className="flex items-center">
                     Office & Coworking Space
                 </Link>
             </Typography>

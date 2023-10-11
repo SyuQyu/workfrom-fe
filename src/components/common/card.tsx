@@ -12,7 +12,7 @@ import clsx from "clsx";
 
 export default function ProfileCard({ data }: props) {
     return (
-        <Card className={clsx("w-96 ", data?.color ? "bg-gray-600 border-2 border-yellow-500" : "bg-gray-800")}>
+        <Card className={clsx( data?.color ? "bg-gray-600 border-2 border-yellow-500" : "bg-gray-800")}>
             <CardHeader floated={false} className="h-80 m-8 mb-0">
                 <ImageWithFallback
                     src={data?.url!}

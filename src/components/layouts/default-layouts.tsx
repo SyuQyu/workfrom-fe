@@ -4,12 +4,12 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Header from './header/header';
 import Footer from './footer/footer';
-export default function DefaultLayout({ children }: Props) {
+export default function DefaultLayout({ children, bgColor }: Props) {
     useEffect(() => {
         AOS.init({});
     }, []);
     return (
-        <body id='layout-default'>
+        <body id='layout-default' className={bgColor}>
             <Header />
             <main className='main'>{children}</main>
             <Footer />
@@ -19,4 +19,5 @@ export default function DefaultLayout({ children }: Props) {
 
 type Props = {
     children: React.ReactNode;
+    bgColor?: string;
 };

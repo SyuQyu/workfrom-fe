@@ -2,10 +2,6 @@
 
 import { Button, Typography } from "@material-tailwind/react";
 import { AccordionComponent, Card, Card2, CarouselComponent, ImageWithFallback, InputWithButton, Tabs } from "@/components/common";
-export const metadata = {
-    title: 'Peluang.co',
-    description: 'test description',
-};
 
 import { images } from '@/contants/imageHome'
 import { data1, data2 } from '@/contants/tipeSpace'

@@ -5,4 +5,7 @@ import Card2 from "./card2";
 import Tabs from "./tabs";
 import AccordionComponent from "./accordion";
 import InputWithButton from "./input";
-export { ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent };
+import Breadcrumbs from "./breadcumb";
+import Select from "./select";
+import MultiRangeSlider from "./multiRangeSlider";
+export {MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };

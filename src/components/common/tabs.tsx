@@ -18,7 +18,7 @@ export default function TabsCustomAnimation() {
             value: "sebagai-pelanggan",
             desc: (
                 <div className="flex flex-row gap-10 my-12 relative">
-                    <div className="bg-yellow-500 absolute rounded-xl -z-10 -top-8 left-44 w-[400px] h-[400px]"></div>
+                    <div className="bg-yellow-500 absolute rounded-xl -z-10 -top-[1%] left-[10%] w-[20%] h-[80%]"></div>
                     <div className=" flex justify-end">
                         <ImageWithFallback
                             priority={true}
@@ -46,7 +46,7 @@ export default function TabsCustomAnimation() {
             value: "sebagai-pemilik",
             desc: (
                 <div className="flex flex-row gap-10 my-12 relative">
-                    <div className="bg-yellow-500 absolute rounded-xl -z-10 -top-8 left-44 w-[400px] h-[400px]"></div>
+                    <div className="bg-yellow-500 absolute rounded-xl -z-10 -top-[1%] left-[10%] w-[20%] h-[80%]"></div>
                     <div className=" flex justify-end">
                         <ImageWithFallback
                             priority={true}

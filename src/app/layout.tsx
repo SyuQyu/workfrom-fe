@@ -5,10 +5,10 @@ import { POPPINS, ROBOTO_MONO } from '@/contants/fonts';
 import DefaultLayout from '@/components/layouts/default-layouts';
 export const metadata = {
     title: {
-        default: 'Peluang.co',
-        template: '%s | Peluang.co',
+        default: 'Workfrom.id',
+        template: '%s | Workfrom.id',
     },
-    description: 'Peluang.co tes desc',
+    description: 'Workfrom.id tes desc',
 };
 
 export default function RootLayout({ children }: Props) {
