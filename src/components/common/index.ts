@@ -8,4 +8,5 @@ import InputWithButton from "./input";
 import Breadcrumbs from "./breadcumb";
 import Select from "./select";
 import MultiRangeSlider from "./multiRangeSlider";
-export {MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };
+import CardSpace from "./cardSpace";
+export {CardSpace, MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };

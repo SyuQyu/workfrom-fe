@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { Breadcrumbs, InputWithButton, MultiRangeSlider, Select } from '@/components/common';
+import { Breadcrumbs, CardSpace, InputWithButton, MultiRangeSlider, Select } from '@/components/common';
 import { optionUseCase } from '@/contants/optionSpace'
 const MapPage = () => {
     const [center, setCenter] = useState({ lat: 37.7749, lng: -122.4194 }); // default center of San Francisco
@@ -35,11 +35,9 @@ const MapPage = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between'>
-                <div>
-                </div>
-                <div>
-
+            <div className='flex flex-wrap justify-between items-center mt-10'>
+                <div className='mb-5'>
+                    <CardSpace />
                 </div>
             </div>
         </div>
