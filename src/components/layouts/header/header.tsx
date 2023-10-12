@@ -39,7 +39,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 color="blue-gray"
                 className="p-1 font-bold text-black"
             >
-                <Link href="#" className="flex items-center">
+                <Link href="/blog" className="flex items-center">
                     Blog
                 </Link>
             </Typography>
@@ -59,7 +59,7 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 color="blue-gray"
                 className="p-1 font-bold text-black"
             >
-                <Link href="#" className="flex items-center">
+                <Link href="/building-owner" className="flex items-center">
                     As Bulding Owner
                 </Link>
             </Typography>

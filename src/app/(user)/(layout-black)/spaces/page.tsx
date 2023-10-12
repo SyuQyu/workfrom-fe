@@ -6,14 +6,18 @@ import { optionUseCase } from '@/contants/optionSpace'
 const MapPage = () => {
     const [center, setCenter] = useState({ lat: 37.7749, lng: -122.4194 }); // default center of San Francisco
     const [zoom, setZoom] = useState(10); // default zoom level
-
+    const data: any = [
+        {
+            name: 'Spaces',
+            link: 'spaces'
+        }
+    ]
     useEffect(() => {
         // fetch data or perform any other necessary setup here
     }, []);
-
     return (
         <div className='mx-5'>
-            <Breadcrumbs />
+            <Breadcrumbs data={data}/>
             <div className='flex flex-col gap-5'>
                 <InputWithButton label='Cari' textColor='white' className='bg-gray-800 mt-3' buttonName='Cari' buttonStyle='bg-gold-500 text-black' />
                 <div className='flex justify-start gap-4'>

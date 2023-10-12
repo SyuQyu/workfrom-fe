@@ -1,5 +1,6 @@
 import ImageWithFallback from "./imageWithFallback";
 import CarouselComponent from "./carousel";
+import CarouselComponent2 from "./carousel2";
 import Card from "./card";
 import Card2 from "./card2";
 import Tabs from "./tabs";
@@ -9,4 +10,5 @@ import Breadcrumbs from "./breadcumb";
 import Select from "./select";
 import MultiRangeSlider from "./multiRangeSlider";
 import CardSpace from "./cardSpace";
-export {CardSpace, MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };
+import CardImg from "./cardImg";
+export {CardImg, CardSpace, CarouselComponent2, MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };
