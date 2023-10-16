@@ -13,7 +13,10 @@ import {
     BuildingOfficeIcon,
     WifiIcon
 } from "@heroicons/react/24/solid";
-export default function BookingCard({ className, data, colorSettings }: props) {
+import { use, useEffect } from "react";
+export default function BookingCard({ className, tags, text, rating, location, desc, price, colorSettings }: props) {
+    useEffect(() => {
+    }, []);
     return (
         <Card className="w-full max-w-[26rem] shadow-lg bg-gray-800 border-yellow-500 border">
             <CardHeader floated={false} color="blue-gray">
@@ -40,16 +43,17 @@ export default function BookingCard({ className, data, colorSettings }: props) {
             </CardHeader>
             <CardBody className="p-5 flex flex-col gap-3">
                 <div className="flex flex-wrap justify-start items-center gap-4">
-                    <Button className="bg-gold-500 text-black" size="sm">
-                        Book Sekarang
-                    </Button>
-                    <Button className="bg-gold-500 text-black" size="sm">
-                        Book Sekarang
-                    </Button>
+                    {
+                        tags?.map((item: any, index: number) => (
+                            <Button className="bg-gold-500 text-black" size="sm">
+                                {item.name}
+                            </Button>
+                        ))
+                    }
                 </div>
                 <div className="flex items-center justify-between">
                     <Typography variant="h5" className={clsx("font-semibold", colorSettings?.titleColor ? colorSettings?.titleColor : 'text-gold-500')}>
-                        {data?.text ? data?.text : "Booking Card"}
+                        {text ? text : "Gedung 01"}
                     </Typography>
                     <Typography
                         className={clsx("flex items-center gap-1.5 font-normal", colorSettings?.ratingColor ? colorSettings?.ratingColor : 'text-white')}
@@ -66,26 +70,26 @@ export default function BookingCard({ className, data, colorSettings }: props) {
                                 clipRule="evenodd"
                             />
                         </svg>
-                        5.0
+                        {rating ? rating : "4.5"}
                     </Typography>
                 </div>
                 <div className="flex flex-row items-center justify-start gap-2">
                     <BuildingOfficeIcon className="w-8 h-8 text-white" />
                     <Typography className={clsx(colorSettings?.descColor ? colorSettings?.descColor : 'text-white')}>
                         {
-                            data?.location ? data?.location : "Hawwaian, USA"
+                            location ? location : "Hawwaian, USA"
                         }
                     </Typography>
                 </div>
                 <Typography className={clsx(colorSettings?.descColor ? colorSettings?.descColor : 'text-white')}>
                     {
-                        data?.desc ? data?.desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
+                        desc ? desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
                     }
                 </Typography>
                 <div className="group inline-flex flex-wrap items-center gap-3">
                     <Tooltip content="Free Wifi">
                         <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-white/10 hover:bg-white/10 hover:!opacity-100 group-hover:opacity-70">
-                            <WifiIcon className="w-5 h-5 text-white"/>
+                            <WifiIcon className="w-5 h-5 text-white" />
                         </span>
                     </Tooltip>
                 </div>
@@ -94,7 +98,7 @@ export default function BookingCard({ className, data, colorSettings }: props) {
                         Price
                     </Typography>
                     <Typography className={clsx(colorSettings?.descColor ? colorSettings?.descColor : 'text-white')}>
-                        IDR 5.000.000
+                        IDR {price ? price : "5.000.000"}
                     </Typography>
                 </div>
             </CardBody>
@@ -109,7 +113,12 @@ export default function BookingCard({ className, data, colorSettings }: props) {
 
 type props = {
     className?: string;
-    data?: any;
+    tags?: any;
+    text?: any;
+    rating?: any;
+    location?: any;
+    desc?: any;
+    price?: any;
     colorSettings?: {
         ratingColor?: string | 'text-white';
         titleColor?: any | 'text-white';

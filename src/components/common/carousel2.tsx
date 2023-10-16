@@ -13,7 +13,7 @@ export default function CarouselWithContent({ data, className }: props) {
                                 alt={item.name}
                                 width={0}
                                 height={0}
-                                className="w-1/2 object-cover" />
+                                className="w-1/2 h-full max-h-[265px] object-cover" />
                             <div className="w-1/2 flex flex-col justify-between gap-5 items-start bg-gray-800 h-full p-8">
                                 <Button className="bg-gold-500 text-black" size="sm">
                                     FEATURED

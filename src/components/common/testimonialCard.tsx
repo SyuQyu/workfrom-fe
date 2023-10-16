@@ -24,7 +24,7 @@ function StarIcon() {
     );
 }
 
-export default function TestimonialCard({data, className}: props) {
+export default function TestimonialCard({ name, gedung, stars, review, className }: props) {
     return (
         <Card color="transparent" shadow={true} className={clsx("w-full max-w-[26rem] p-8 shadow-md", className)}>
             <CardHeader
@@ -41,21 +41,19 @@ export default function TestimonialCard({data, className}: props) {
                 />
                 <div className="flex w-full flex-col items-center justify-center gap-2">
                     <Typography variant="h5" color="blue-gray">
-                        Tania Andrew
+                        {name ? name : "Tania Andrew"}
                     </Typography>
-                    <Typography color="blue-gray">Gedung 1</Typography>
-                    <div className="5 flex items-center gap-0">
-                        <StarIcon />
-                        <StarIcon />
-                        <StarIcon />
-                        <StarIcon />
-                        <StarIcon />
+                    <Typography color="blue-gray">{gedung ? gedung : "gedung 01"}</Typography>
+                    <div className="5 flex flex-row items-center gap-1">
+                        <StarIcon /> {stars ? stars : "4.5"}
                     </div>
                 </div>
             </CardHeader>
             <CardBody className="mb-6 p-0">
                 <Typography variant="h5" className="text-black text-center">
-                    &quot;Saya sangat senang telah bergabung dengan platform ini. Mereka tidak hanya membantu saya memasarkan gedung saya dengan efisien, tetapi juga memberikan dukungan yang luar biasa dalam mengelola penyewaan.&quot;
+                    &quot;{
+                        review ? review : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptates."
+                    }&quot;
                 </Typography>
             </CardBody>
         </Card>
@@ -63,6 +61,9 @@ export default function TestimonialCard({data, className}: props) {
 }
 
 type props = {
-    data?: any;
+    name?: any;
+    gedung?: any;
+    stars?: any;
+    review?: any;
     className?: string;
 }

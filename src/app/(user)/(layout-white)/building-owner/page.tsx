@@ -7,6 +7,7 @@ import { images } from '@/contants/imageHome'
 import { data1, data2 } from '@/contants/tipeSpace'
 import { HorizontalScroll, TestimonialCard } from "@/components/common";
 import { dataBuilding } from '@/contants/buildingOwner'
+import { dataReviewOwnerBuilding } from '@/contants/reviewOwnerBuilding'
 export default function Page() {
 
     return (
@@ -80,17 +81,11 @@ export default function Page() {
                         Kisah <span className="text-gold-500">Sukses</span> Pemilik Gedung
                     </Typography>
                     <HorizontalScroll className="w-full gap-24 py-10">
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
-                        <TestimonialCard className="custom-card" />
+                        {
+                            dataReviewOwnerBuilding.map((item, index) => (
+                                <TestimonialCard key={index} name={item.name} gedung={item.gedung} stars={item.stars} review={item.review} className="custom-card"/>
+                            ))
+                        }
                     </HorizontalScroll>
                 </div>
             </div>
