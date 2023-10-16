@@ -1,5 +1,6 @@
 export const data = [
     {
+        id:1,
         tags: [
             {
                 name: "Event"
@@ -15,6 +16,7 @@ export const data = [
         price: '1.000.000 / Month',
     },
     {
+        id:2,
         tags: [
             {
                 name: "Event"
@@ -30,6 +32,7 @@ export const data = [
         price: '2.500.000 / Day',
     },
     {
+        id:3,
         tags: [
             {
                 name: "Event"
@@ -45,6 +48,7 @@ export const data = [
         price: '5.000.000 / Event',
     },
     {
+        id:4,
         tags: [
             {
                 name: "Event"
@@ -60,6 +64,7 @@ export const data = [
         price: '800.000 / Day',
     },
     {
+        id:5,
         tags: [
             {
                 name: "Event"
@@ -75,6 +80,7 @@ export const data = [
         price: '3.000.000 / Day',
     },
     {
+        id:6,
         tags: [
             {
                 name: "Event"
@@ -90,6 +96,7 @@ export const data = [
         price: '4.500.000 / Event',
     },
     {
+        id:7,
         tags: [
             {
                 name: "Event"
@@ -105,6 +112,7 @@ export const data = [
         price: '2.200.000 / Day',
     },
     {
+        id:8,
         tags: [
             {
                 name: "Event"
@@ -120,6 +128,7 @@ export const data = [
         price: '6.500.000 / Event',
     },
     {
+        id:9,
         tags: [
             {
                 name: "Event"
@@ -135,6 +144,7 @@ export const data = [
         price: '7.800.000 / Event',
     },
     {
+        id:10,
         tags: [
             {
                 name: "Event"

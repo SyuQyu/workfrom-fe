@@ -14,7 +14,8 @@ import {
     WifiIcon
 } from "@heroicons/react/24/solid";
 import { use, useEffect } from "react";
-export default function BookingCard({ className, tags, text, rating, location, desc, price, colorSettings }: props) {
+import Link from "next/link";
+export default function BookingCard({ className, tags, text, rating, location, desc, price, id, colorSettings }: props) {
     useEffect(() => {
     }, []);
     return (
@@ -45,7 +46,7 @@ export default function BookingCard({ className, tags, text, rating, location, d
                 <div className="flex flex-wrap justify-start items-center gap-4">
                     {
                         tags?.map((item: any, index: number) => (
-                            <Button className="bg-gold-500 text-black" size="sm">
+                            <Button className="bg-gold-500 text-black" size="sm" key={index}>
                                 {item.name}
                             </Button>
                         ))
@@ -103,9 +104,11 @@ export default function BookingCard({ className, tags, text, rating, location, d
                 </div>
             </CardBody>
             <CardFooter className="pt-3">
-                <Button size="lg" fullWidth={true} className="bg-gold-500 text-black">
-                    Lihat Detail
-                </Button>
+                <Link href={`/spaces/detail/${id}`}>
+                    <Button size="lg" fullWidth={true} className="bg-gold-500 text-black">
+                        Lihat Detail
+                    </Button>
+                </Link>
             </CardFooter>
         </Card>
     );
@@ -113,6 +116,7 @@ export default function BookingCard({ className, tags, text, rating, location, d
 
 type props = {
     className?: string;
+    id?:any;
     tags?: any;
     text?: any;
     rating?: any;

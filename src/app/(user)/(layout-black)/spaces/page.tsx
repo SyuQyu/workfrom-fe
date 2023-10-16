@@ -43,13 +43,15 @@ const MapPage = () => {
             <div className='flex flex-wrap justify-start items-center mt-10 gap-10'>
                 {
                     data?.map((item: any, index: number) => (
-                        <div className='mb-5'>
-                            <CardSpace tags={item.tags}
+                        <div className='mb-5' key={index}>
+                            <CardSpace id={item.id}
+                                tags={item.tags}
                                 text={item.text}
                                 rating={item.rating}
                                 location={item.location}
                                 desc={item.desc}
-                                price={item.price} />
+                                price={item.price}
+                            />
                         </div>
 
                     ))
