@@ -11,4 +11,7 @@ import Select from "./select";
 import MultiRangeSlider from "./multiRangeSlider";
 import CardSpace from "./cardSpace";
 import CardImg from "./cardImg";
-export {CardImg, CardSpace, CarouselComponent2, MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };
+import TestimonialCard from "./testimonialCard";
+import HorizontalScroll from "./horizontalScroll";
+import SimpleCard from "./simpleCard";
+export {SimpleCard, TestimonialCard, HorizontalScroll, CardImg, CardSpace, CarouselComponent2, MultiRangeSlider, Select, ImageWithFallback, CarouselComponent, Tabs, Card, Card2, InputWithButton, AccordionComponent, Breadcrumbs };

@@ -1,0 +1,13 @@
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    .custom-card {
+        flex: 0 0 auto;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

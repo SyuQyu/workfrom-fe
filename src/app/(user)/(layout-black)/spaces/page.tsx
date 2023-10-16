@@ -43,6 +43,27 @@ const MapPage = () => {
                 <div className='mb-5'>
                     <CardSpace />
                 </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
+                <div className='mb-5'>
+                    <CardSpace />
+                </div>
             </div>
         </div>
         // <div style={{ height: '100vh', width: '100%' }}>
