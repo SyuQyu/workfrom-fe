@@ -1,13 +1,12 @@
+@use 'layouts/layouts';
+@use 'common/multiRangeSlider';
+@use 'common/horizontalScroll';
+@use 'base';
+@use 'utilities';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'layouts/layouts';
-@import 'common/multiRangeSlider';
-@import 'common/horizontalScroll';
-
-@import 'base';
-@import 'utilities';
 
 // COMPONENTS
 // @import 'components/commons/button';
