@@ -1,17 +1,11 @@
-import React from "react";
-import clsx from 'clsx';
+
+
 import Link from 'next/link';
-import {
-    Navbar,
-    MobileNav,
-    Typography,
-    Button,
-    IconButton,
-    Card,
-    Collapse,
-} from "@material-tailwind/react";
+import React from "react";
+
 import { ImageWithFallback } from "@/components/common";
-export default function Header({ className, authPage, setAuthPage }: Props) {
+
+export default function Header() {
     const [openNav, setOpenNav] = React.useState(false);
 
     React.useEffect(() => {
@@ -23,51 +17,31 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
 
     const navList = (
         <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-bold text-black"
-            >
+            <li className="p-1 font-bold text-white text-sm">
                 <Link href="/spaces" className="flex items-center">
                     Office & Coworking Space
                 </Link>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-bold text-black"
-            >
+            </li>
+            <li className="p-1 font-bold text-white text-sm">
                 <Link href="/blog" className="flex items-center">
                     Blog
                 </Link>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-bold text-black"
-            >
+            </li>
+            <li className="p-1 font-bold text-white text-sm">
                 <Link href="#" className="flex items-center">
                     Contact Us
                 </Link>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-bold text-black"
-            >
+            </li>
+            <li className="p-1 font-bold text-white text-sm">
                 <Link href="/building-owner" className="flex items-center">
                     As Bulding Owner
                 </Link>
-            </Typography>
+            </li>
         </ul>
     );
     return (
-        <div className="sticky top-5 z-10 h-max max-w-full rounded-xl py-2 px-4 lg:px-8 lg:py-4 m-5 shadow-2xl backdrop-blur-xl bg-white">
-            <div className="flex items-center justify-between text-blue-gray-900 font-bold">
+    <div className="sticky top-5 z-10 h-max max-w-full rounded-xl py-2 px-4 lg:px-8 lg:py-4 m-5 shadow-2xl backdrop-blur-xl bg-blue-500">
+            <div className="flex items-center justify-between text-white font-bold">
                 <Link href="/">
                     <ImageWithFallback
                         priority={true}
@@ -78,11 +52,11 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>
-                    <IconButton
-                        variant="text"
+                    <button
+                        type="button"
                         className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-                        ripple={false}
                         onClick={() => setOpenNav(!openNav)}
+                        aria-label="Toggle navigation"
                     >
                         {openNav ? (
                             <svg
@@ -114,32 +88,11 @@ export default function Header({ className, authPage, setAuthPage }: Props) {
                                 />
                             </svg>
                         )}
-                    </IconButton>
-                </div>
-                <div className="lg:flex gap-4 hidden">
-                    <Button variant="text" size="sm" className="text-black hidden lg:inline-block" fullWidth>
-                        <Link href="/login">Login</Link>
-                    </Button>
-                    <Button size="sm" className="hidden lg:inline-block text-black bg-gold-500" fullWidth>
-                        <Link href="/register">register</Link>
-                    </Button>
+                    </button>
                 </div>
             </div>
-            <Collapse open={openNav}>
-                {navList}
-                <Button variant="text" size="sm" className="mb-2" fullWidth>
-                    <Link href="/login">Login</Link>
-                </Button>
-                <Button size="sm" className="mb-2 text-black bg-gold-500" fullWidth>
-                    <Link href="/register">register</Link>
-                </Button>
-            </Collapse>
         </div>
     );
 }
 
-type Props = {
-    className?: string;
-    authPage?: boolean;
-    setAuthPage?: any;
-};
+// Props removed, not used

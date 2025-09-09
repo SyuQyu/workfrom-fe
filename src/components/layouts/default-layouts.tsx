@@ -1,9 +1,12 @@
 'use client';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import AOS from 'aos';
 import { useEffect } from 'react';
-import Header from './header/header';
+
 import Footer from './footer/footer';
+import Header from './header/header';
+
 export default function DefaultLayout({ children, bgColor }: Props) {
     useEffect(() => {
         AOS.init({});
